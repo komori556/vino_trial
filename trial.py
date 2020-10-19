@@ -4,7 +4,7 @@ import cv2 as cv
 import fire
 
 
-def detect_try(model_name: str = "person-detection-0106"):
+def detect_try(model_name: str = "person-detection-0106", conf_threshold: float = 0.5):
   print(model_name + '.xml')
   net = cv.dnn_DetectionModel(model_name + '.xml', model_name + '.bin')
   net.setPreferableTarget(cv.dnn.DNN_TARGET_MYRIAD)
@@ -14,7 +14,7 @@ def detect_try(model_name: str = "person-detection-0106"):
     ret, frame = video.read()
     if frame is None:
       raise Exception('Image not found!')
-    _, confidences, boxes = net.detect(frame, confThreshold=0.3)
+    _, confidences, boxes = net.detect(frame, confThreshold=conf_threshold)
     for confidence, box in zip(list(confidences), boxes):
       cv.rectangle(frame, box, color=(0, 255, 0))
       cv.putText(
