@@ -1,0 +1,11 @@
+[style]
+based_on_style = chromium
+split_before_first_argument = true
+dedent_closing_brackets = false
+indent_width = 2
+continuation_indent_width = 2
+blank_line_before_nested_class_or_def = false
+join_multiple_lines = true
+split_before_dot = true
+split_complex_comprehension = true
+column_limit = 100
