@@ -148,8 +148,8 @@ class Tracker:
     )
 
 
-# device = "CPU"
-device = "MYRIAD"
+device = "CPU"
+# device = "MYRIAD"
 cpu_extension = None
 ie_core = IECore()
 if device == "CPU" and cpu_extension:
