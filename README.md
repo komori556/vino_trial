@@ -5,8 +5,8 @@ python3 trial.py $MODEL_NAME $THRETHOLD
 ```
 モデルのダウンロード
 ```
-wget $binのアドレス
-wget $xmlのアドレス
+wget $binのurl
+wget $xmlのurl
 ```
 例
 ```
